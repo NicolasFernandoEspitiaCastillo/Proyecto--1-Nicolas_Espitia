@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 body{
-    padding-top: 45px;
+    width: 390px;
+    height: 844px;
+    padding-top: 45px; 
     padding-left: 21px;
     padding-right: 21px;
 }
@@ -54,7 +56,6 @@ body{
 
 .container_nav{
     /* background: blue; */
-   
 }
 
 .container_search { 
@@ -86,9 +87,16 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    overflow-x: auto; /* Activa el scroll horizontal */
+    white-space: nowrap; /* Evita que los elementos salten de línea */
+    scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+}
+.container_scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .container_scroll a{
+    flex: 0 0 auto;
     width: 112px;
     height: 28px;
     font-size: 12px;
@@ -98,6 +106,10 @@ body{
     align-items: center; /* Centra verticalmente */
     
 }
+.spacer {
+    flex: 0 0 21px; /* Ajusta este valor según el espacio que necesites */
+}
+
 .container_scroll a:nth-child(1){
     background: var(--color-2);
 }
@@ -109,4 +121,44 @@ body{
 }
 .container_scroll a:nth-child(4){
     background: var(--color-5);
+}
+
+/*********************** main *************************/
+
+.container_main {
+    background: blue;
+    margin-top: 40px;
+    
+}
+.container_group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.title{
+        font-size: 14px;
+        display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    }
+.paragraph{
+        font-size: 12px;
+        display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    }
+
+
+.container_img {
+    background: green;
+    margin-top: 16px;
+}
+.container_list {
+    background: violet;
+}
+.list {
+    background: purple;
+}
+.info {
+    background: orange;
 }
